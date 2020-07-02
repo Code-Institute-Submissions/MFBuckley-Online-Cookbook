@@ -5,9 +5,11 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 # UX
 
-1. As an administrator, I am creating a database of recipes that can be searched and edited.
+1. As a Full Stack Developer I am creating an online cooking database that allows users to Create, Read, Update and Delete cooking recipes for a Thermomix kitchen appliance.
 
-1. 
+1. As a back-end developer, I am creating a database of recipes so that it can be searched and updated by a user.
+
+1. As a front-end developer I am creating a responsive webpage using Bootstrap4 so that it works well on all screen sizes.
 
 1. 
 
@@ -22,7 +24,20 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 # Technologies used
 
-HTML, CSS3, Javascript, Python, Flask, MongoDB
+[HTML5](https://html.spec.whatwg.org/)
+
+[CSS3](https://www.w3.org/Style/CSS/specs.en.html) 
+
+[Bootstrap4](https://getbootstrap.com/)
+
+[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
+
+[Python3](https://www.python.org/) 
+
+[Flask](https://www.fullstackpython.com/flask.html) 
+
+[MongoDB](https://www.mongodb.com/)
+
 
 # Testing
 
