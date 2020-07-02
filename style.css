@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap');
+
+
+
+/*----------Header-------*/
+.container h1 {
+    text-align: center;   
+    font-family: "Open Sans";
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*----------Navbar-------*/
+nav {
+    font-family: "Open Sans";
+}
+
+/*-Image of a Thermomix kitchen appliance--*/
+#thermo {
+    margin: none;
+}
+
+/*----------Footer-------*/
+.card-footer {
+    text-align: center;
+    font-family: "Open Sans";
+}

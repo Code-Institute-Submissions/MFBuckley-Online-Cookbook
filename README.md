@@ -1,39 +1,46 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Online Cookbook
 
-Welcome MFBuckley,
+A database of cooking recipes for the Thermomix kitchen appliance that can be edited and updated.
+Created by the Vorwerk company, a Thermomix is essentially a powerful blender which also cooks, kneads and stirs food mixtures making it a powerful ally in the kitchen.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+# UX
 
-## Gitpod Reminders
+1. As an administrator, I am creating a database of recipes that can be searched and edited.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+1. 
 
-`python3 -m http.server`
+1. 
 
-A blue button should appear to click: *Make Public*,
+1. 
 
-Another blue button should appear to click: *Open Browser*.
+# Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Existing Features
 
-A blue button should appear to click: *Make Public*,
+## Features Left to Implement
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+# Technologies used
 
-## Updates Since The Instructional Video
+HTML, CSS3, Javascript, Python, Flask, MongoDB
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+# Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Deployment
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Heroku
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Credits
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Content
 
---------
+## Media
 
-Happy coding!
+Recipes source and [Thermomix](https://thermomix.vorwerk.de/thermomix/tm6/)
+
+## Acknowledgements
+
+This website idea is a project suggestion for the third milestone project in the Fullstack Web Developer course from Code Institute, Dublin Ireland.
+
+
+
