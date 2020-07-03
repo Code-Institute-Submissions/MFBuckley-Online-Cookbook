@@ -19,6 +19,8 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 ## Existing Features
 
+Template inheritance via Jinja code from base.html extended to child html files.
+
 ## Features Left to Implement
 
 
