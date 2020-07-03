@@ -45,7 +45,7 @@ Template inheritance via Jinja code from base.html extended to child html files.
 
 # Deployment
 
-Heroku
+Deployed using Heroku Git. Installation instructions may be found [here](https://dashboard.heroku.com/apps/online-cooking-flask-mongo/deploy/heroku-git)
 
 # Credits
 
