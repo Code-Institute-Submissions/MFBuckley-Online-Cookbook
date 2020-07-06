@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="templates/edit.html">
+    <link rel="stylesheet" href="templates/all_recipes.html">
+
+    <title>Online Cookbook</title>
+</head>
+
+
+<!--Edit Form -->
+<body>
+    
+
+
+        <form>
+            <div class="form-group">
+                    <select class="form-control" id="selectRecipe">
+                        <option>Select Recipe</option>
+                        <option>Apricot Banana Bread</option>
+                        <option>Ciabatta</option>
+                        <option>Watermelon Lemonade</option>
+                        <option>Apricot- Lemon Lemonade</option>
+                        <option>Bean & Avocado Burrito</option>
+                        <option>Chicken Burrito with Chipotle Sauce</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <textarea type="text" class="form-control" id="ingredientsTextarea" placeholder="Insert Ingredients here" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <textarea type="text" class="form-control" id="instructionsTextarea" placeholder="Add Cooking Instructions" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUpdate">Update Image:</label>
+                <input type="file" class="form-control-file" id="imageUpdate">
+            </div>
+        </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>   
+
+</html>
