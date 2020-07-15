@@ -1,4 +1,9 @@
 import os
+
+from os import path
+if path.exists('env.py'):
+    import env
+
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo #import pymongo library
 from bson.objectid import ObjectId #importing from BSON library
@@ -7,8 +12,8 @@ from bson.objectid import ObjectId #importing from BSON library
 app = Flask(__name__)
 
 # Connect to database
-app.config["MONGO_DBNAME"] = 'online_cooking'
-app.config["MONGO_URI"] = 'mongodb://carrot:WasUpDOC@myfirstcluster-shard-00-00-riwiq.gcp.mongodb.net:27017,myfirstcluster-shard-00-01-riwiq.gcp.mongodb.net:27017,myfirstcluster-shard-00-02-riwiq.gcp.mongodb.net:27017/online_cooking?ssl=true&replicaSet=myFirstCluster-shard-0&authSource=admin&retryWrites=true&w=majority'
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 # Create instance of PyMongo
 mongo = PyMongo(app)
@@ -30,6 +35,10 @@ def add_recipe():
 def update_recipe():
     return render_template("edit.html")
 
+# Connect to home page 
+@app.route('/homepage')
+def homepage():
+    return render_template("index.html")
 
 # Set PORT and IP Address
 if __name__ == '__main__':
