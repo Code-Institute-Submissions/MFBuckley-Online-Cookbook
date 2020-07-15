@@ -1,8 +1,9 @@
+<!--Child html in this file incorporated in parent html file base.html -->
 {% extends 'base.html'%}
 {% block content %}
 
 
-<!--Edit Form -->
+<!--Edit Recipe Form -->
 <body>
     
 
@@ -21,11 +22,11 @@
             </div>
 
             <div class="form-group">
-                <textarea type="text" class="form-control" id="ingredientsTextarea" placeholder="Insert Ingredients here" rows="3"></textarea>
+                <textarea type="text" class="form-control" id="ingredientsTextarea" placeholder="Insert Ingredients here" rows="20"></textarea>
             </div>
 
             <div class="form-group">
-                <textarea type="text" class="form-control" id="instructionsTextarea" placeholder="Add Cooking Instructions" rows="3"></textarea>
+                <textarea type="text" class="form-control" id="instructionsTextarea" placeholder="Add Cooking Instructions" rows="20"></textarea>
             </div>
 
             <div class="form-group">
@@ -38,4 +39,4 @@
 {% endblock %}
 </body>   
 
-</html>
+

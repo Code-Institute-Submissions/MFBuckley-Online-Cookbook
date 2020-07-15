@@ -1,3 +1,4 @@
+<!--Child html in this file incorporated in parent html file base.html -->
 {% extends 'base.html'%}
 {% block content %}
 
@@ -9,6 +10,7 @@
             {{recipe.servings}}
         {% endfor %}
 
+<!--Collapsible cards showing Ingredients and Preparation steps -->
 <p>
   <button class="btn btn-success" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ingredients & Preparation</button>
 </p>

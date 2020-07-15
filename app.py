@@ -15,21 +15,23 @@ mongo = PyMongo(app)
 
 @app.route('/')
 
-# Read Recipes
+# Connect Read all Recipes file
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("all_recipes.html", recipes=mongo.db.recipes.find())
 
-# Create/Add recipes to database
+# Connect to Create/Add recipes to database file
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html")
 
-# Update Recipe
+# Connect to Update Recipes file
 @app.route('/update_recipe')
 def update_recipe():
     return render_template("edit.html")
 
+
+# Set PORT and IP Address
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),

@@ -11,7 +11,7 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 1. As a front-end developer I am creating a responsive webpage using Bootstrap4 so that it works well on all screen sizes.
 
-1. 
+1. As a cook I would like to display images and text to show what the meal looks like, what ingredients are required and how to prepare it.
 
 1. 
 
