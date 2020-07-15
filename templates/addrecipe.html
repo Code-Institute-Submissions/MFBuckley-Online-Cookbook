@@ -2,6 +2,43 @@
 {% extends 'base.html'%}
 {% block content %}
 
-<h3>Add Recipe</h3>
+<div class="row">
+    <div class="container text-center"><h2>Add Recipe</h2></div>    
+</div>
+
+<form>
+            
+
+            <div class="form-group col-md-12">
+                <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20"></textarea>
+            </div>
+
+            <div class="form-group col-md-12">
+                <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20"></textarea>
+            </div>
+
+            <div class="form-group col-md-6">   
+                <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
+            </div>
+
+
+
+            <div class="form-group col-md-12">
+                <label for="imageUpdate">Upload Image:</label>
+                <input type="file" class="form-control-file" id="imageUpdate">
+            </div>
+
+            <div class="form-group col-md-12">
+                <button id="save_changes" type="submit" class="btn btn-success">Save</button>
+            </div>
+        </form>
 
 {% endblock %}

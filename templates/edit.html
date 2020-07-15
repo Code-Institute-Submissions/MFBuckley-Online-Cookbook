@@ -9,7 +9,7 @@
 
 
         <form>
-            <div class="form-group">
+            <div class="form-group col-md-12">
                     <select class="form-control" id="selectRecipe">
                         <option>Select Recipe</option>
                         <option>Apricot Banana Bread</option>
@@ -21,17 +21,35 @@
                     </select>
             </div>
 
-            <div class="form-group">
-                <textarea type="text" class="form-control" id="ingredientsTextarea" placeholder="Insert Ingredients here" rows="20"></textarea>
+            <div class="form-group col-md-12">
+                <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20"></textarea>
             </div>
 
-            <div class="form-group">
-                <textarea type="text" class="form-control" id="instructionsTextarea" placeholder="Add Cooking Instructions" rows="20"></textarea>
+            <div class="form-group col-md-12">
+                <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20"></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="imageUpdate">Update Image:</label>
+            <div class="form-group col-md-6">   
+                <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
+            </div>
+
+
+
+            <div class="form-group col-md-12">
+                <label for="imageUpdate">Upload Image:</label>
                 <input type="file" class="form-control-file" id="imageUpdate">
+            </div>
+
+            <div class="form-group col-md-12">
+                <button id="save_changes" type="submit" class="btn btn-success">Save</button>
             </div>
         </form>
 
