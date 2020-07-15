@@ -1,6 +1,6 @@
 # Online Cookbook
 
-A database of cooking recipes for the Thermomix kitchen appliance that can be edited and updated.
+A database of cooking recipes for the Thermomix kitchen appliance that can be read, edited and updated.
 Created by the Vorwerk company, a Thermomix is essentially a powerful blender which also cooks, kneads and stirs food mixtures making it a powerful ally in the kitchen.
 
 # UX
@@ -68,6 +68,17 @@ MongoDB Atlas is the global cloud database service for modern applications.
 # Deployment
 
 Deployed using Heroku Git. Installation instructions may be found [here](https://dashboard.heroku.com/apps/online-cooking-flask-mongo/deploy/heroku-git).
+
+* Login to heroku via terminal
+    * ``` $ heroku Login```
+* Initialise git repository in terminal
+    * ``` git init ```
+    * ``` git add . ```
+    * ``` git commit -m "Commit message" ```
+* Remote from git to heroku via terminal
+    * ``` heroku git:remote -a heroku app name ```
+* Run Heroku app from terminal 
+    * ``` heroku ps:scale web=1 ```
 
 # Credits
 
