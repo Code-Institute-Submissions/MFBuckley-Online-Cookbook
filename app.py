@@ -33,12 +33,17 @@ def add_recipe():
 # Connect to Update Recipes file
 @app.route('/update_recipe')
 def update_recipe():
-    return render_template("edit.html")
+    return render_template("edit.html", categories=mongo.db.categories.find(),
+    recipes=mongo.db.recipes.find())
 
-# Connect to home page 
-@app.route('/homepage')
-def homepage():
-    return render_template("index.html")
+# Post new recipe to database
+@app.route('/new_recipe', methods=['POST'])
+def new_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
+    
 
 # Set PORT and IP Address
 if __name__ == '__main__':
