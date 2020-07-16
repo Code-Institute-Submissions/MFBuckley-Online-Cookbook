@@ -46,12 +46,13 @@ def new_recipe():
 # Edit recipes button connect
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipes_id):
-    the_recipe = mongo.db.recipes.find_one({"_id: ObjectId(recipes_id)"})
+    the_recipe = mongo.db.recipes.find({"_id: ObjectId(recipes_id)"})
     all_categories = mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
 
-@app.route('/update_recipe/<recipe_id>', methods=["POST"])
-def update_recipe(recipe_id):
+# Change recipe
+@app.route('/change_recipe/<recipe_id>', methods=["POST"])
+def change_recipe(recipe_id):
     recipes = mongo.db.tasks
     recipes.update( {'_id': ObjectId(recipe_id)},
     {        
@@ -61,8 +62,7 @@ def update_recipe(recipe_id):
         'preparation': request.form.get('preparation'),
         'servings':request.form.get('servings'),
         'prep_time': request.form.get('prep_time'),
-        'total_cooking_time': request.form.get('total_cooking_time
-')
+        'total_cooking_time': request.form.get('total_cooking_time')
     })
     return redirect(url_for('get_tasks'))
 

@@ -10,7 +10,7 @@
         </div>      
 
 
-        <form>
+        <form action="{{ url_for('change_recipe') }}" method="POST">
 
             <div class="form-group col-md-12">
                     <select class="form-control" id="selectCategory" name="selectCategory">
@@ -23,32 +23,33 @@
             </div>
 
             <div class="form-group col-md-12">
-                    <select class="form-control" id="selectRecipe" name="selectRecipe">
+                    <select class="form-control" id="recipeTitle" name="recipeTitle">
                         <option>Select Recipe</option>
                         {% for recipe in recipes %}
                             <option value="{{recipe.title}}">{{recipe.title}}</option>
-                        {% endfor %}
+                        
                     </select>
             </div>
 
             <div class="form-group col-md-12">
-                <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20"></textarea>
+                <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20">{{recipe.ingredients}}</textarea>
             </div>
 
             <div class="form-group col-md-12">
-                <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20"></textarea>
+                <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20">{{recipe.preparation}}</textarea>
             </div>
 
             <div class="form-group col-md-6">   
-                <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings">
+                <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings: " value="{{recipe.servings}}" >
             </div>
 
             <div class="form-group col-md-6">
-                <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time">
+                <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time: " value="{{recipe.prep_time}}">
             </div>
 
             <div class="form-group col-md-6">
-                <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
+                <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time: " value="{{recipe.total_cooking_time}}">
+            {% endfor %}
             </div>
 
 
@@ -62,6 +63,7 @@
                 <button id="save_changes" type="submit" class="btn btn-success">Save</button>
                 <button id="delete recipe" type="submit" class="btn btn-danger">Delete</button>
             </div>
+            
         </form>
 
    

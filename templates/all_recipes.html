@@ -2,10 +2,50 @@
 {% extends 'base.html'%}
 {% block content %}
 
-        {% for recipe in recipes %}
-            {{recipe.title}}
-            
-        {% endfor %}
+       
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/055bc08c-5abe-48cc-ae97-e1ca9190738b/Derivates/8d637c1d-774d-440c-b6e6-a6bbf72c9435.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Ciabatta</h5>       
+  </div>
+</div>
+
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/765D50D1-4D31-4EF4-9F11-7C7FE5B1310E/Derivates/9d170ea7-e39a-4983-b9c9-85164f0dd7df.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Apricot Banana Bread</h5>       
+  </div>
+</div>
+
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/77CFC68D-8954-4817-A7D5-2B66539834E8/Derivates/130c388b-75f9-47a1-8423-1275e813c2d9.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Watermelon Lemonade</h5>       
+  </div>
+</div>
+
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/A1395469-3EEB-4274-9018-C5BBC5E0465B/Derivates/f1adcaa7-7ba2-45e2-afe7-c1da84109394.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Apricot-Lemon Lemonade</h5>       
+  </div>
+</div>
+
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/D17CF0E1-E0C1-465F-899A-EA24A362392D/Derivates/dbb1e5eb-fcf1-44e0-9d1b-c573608c1ad4.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Bean and Avacado Burrito</h5>       
+  </div>
+</div>
+
+<div class="card mx-auto col-6">
+  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/144019_0-256-2953-2953.jpg" alt="Card image cap">
+  <div class="card-body">    
+    <h5 class="card-title">Chicken and Chipotle Sauce Burrito</h5>       
+  </div>
+</div>
+
+
 
 <!--Collapsible cards showing Ingredients and Preparation steps -->
 <p>
@@ -14,16 +54,20 @@
 <div class="row">
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
+      {% for recipe in recipes %}
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        {{recipe.ingredients}}
       </div>
+      {% endfor %}
     </div>
   </div>
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample2">
+    {% for recipe in recipes %}
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        {{recipe.preparation}}
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>

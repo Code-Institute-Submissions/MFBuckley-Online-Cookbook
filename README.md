@@ -26,6 +26,8 @@ Template inheritance via Jinja code from base.html extended to child html files.
 
 Changing number of servings adjusts amounts of ingredients necessary to make the recipe.
 
+Ingredients and Preparation textareas are limited to 20 rows.
+
 # Technologies used
 
 [HTML5](https://html.spec.whatwg.org/)
