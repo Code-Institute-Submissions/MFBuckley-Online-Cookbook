@@ -43,14 +43,14 @@ def new_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
-# Edit recipes button connect
+# Edit recipes link connect
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipes_id):
     the_recipe = mongo.db.recipes.find({"_id: ObjectId(recipes_id)"})
     all_categories = mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
 
-# Change recipe
+# Change recipe by accessing tasks collection in database
 @app.route('/change_recipe/<recipe_id>', methods=["POST"])
 def change_recipe(recipe_id):
     recipes = mongo.db.tasks
@@ -60,11 +60,11 @@ def change_recipe(recipe_id):
         'title':request.form.get('title'),
         'ingredients': request.form.get('ingredients'),
         'preparation': request.form.get('preparation'),
-        'servings':request.form.get('servings'),
+        'servings': request.form.get('servings'),
         'prep_time': request.form.get('prep_time'),
         'total_cooking_time': request.form.get('total_cooking_time')
     })
-    return redirect(url_for('get_tasks'))
+    return redirect(url_for('get_recipes'))
 
 #Delete recipe
 @app.route('/delete_recipe/<recipe_id>')

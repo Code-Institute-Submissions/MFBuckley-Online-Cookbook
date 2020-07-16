@@ -20,14 +20,17 @@ h2 {
     font-family: "Caveat";
 }
 
+/*----------Image Cards-------*/
+.card {
+    margin-bottom: 20px;
+    font-family: "Caveat";
+}
 /*-------Ingredients and Preparations text areas---*/
 .form-control {
     border: 1px solid #5cb85c;
 }
 
-.collapse {
 
-}
 
 /*-Image of a Thermomix kitchen appliance--*/
 #thermo {
