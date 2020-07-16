@@ -43,6 +43,13 @@ def new_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
+# Edit recipes button connect
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipes_id):
+    the_recipe = mongo.db.recipes.find_one({"_id: ObjectId(recipes_id)"})
+    all_categories = mongo.db.categories.find()
+    return render_template('edit.html', recipe=the_recipe, categories=all_categories)
+
     
 
 # Set PORT and IP Address
