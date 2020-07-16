@@ -13,7 +13,7 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 1. As a cook I would like to display images and text to show what the meal looks like, what ingredients are required and how to prepare it.
 
-1. 
+1. As a cook I want to add, edit and delete recipes to build a collection of my favourite recipes.
 
 # Features
 

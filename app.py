@@ -50,6 +50,28 @@ def edit_recipe(recipes_id):
     all_categories = mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
 
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.tasks
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {        
+        'category_name':request.form.get('category_name'),
+        'title':request.form.get('title'),
+        'ingredients': request.form.get('ingredients'),
+        'preparation': request.form.get('preparation'),
+        'servings':request.form.get('servings'),
+        'prep_time': request.form.get('prep_time'),
+        'total_cooking_time': request.form.get('total_cooking_time
+')
+    })
+    return redirect(url_for('get_tasks'))
+
+#Delete recipe
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.tasks.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('get_recipes'))
+
     
 
 # Set PORT and IP Address
