@@ -7,50 +7,42 @@
 </div>
 
 <form action="{{ url_for('new_recipe') }}", method="POST">
-            <div class="form-group col-md-12">
-                    <select class="form-control" id="selectCategory" name="selectCategory">
-                        <option>Select Category</option>
-                        {% for cat in categories %}
-                            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                        {% endfor %}
-                        
-                    </select>
-            </div>
+    <div class="form-group col-md-12">
+        <select class="form-control" id="selectCategory" name="selectCategory">
+            <option>Select Category</option>
+            {% for cat in categories %}
+            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-            <div class="form-group col-md-12">
-                <input name="title" type="text" class="form-control" id="title" placeholder="Add Title">
-            </div>  
+    <div class="form-group col-md-12">
+        <input name="title" type="text" class="form-control" id="title" placeholder="Add Title">
+    </div>  
 
-            <div class="form-group col-md-12">
-                <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20"></textarea>
-            </div>
+    <div class="form-group col-md-12">
+        <textarea type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20"></textarea>
+    </div>
 
-            <div class="form-group col-md-12">
-                <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20"></textarea>
-            </div>
+    <div class="form-group col-md-12">
+        <textarea type="text" class="form-control" name="preparation" id="preparation" placeholder="Preparation" rows="20"></textarea>
+    </div>
 
-            <div class="form-group col-md-6">   
-                <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings">
-            </div>
+    <div class="form-group col-md-6">   
+        <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings">
+    </div>
 
-            <div class="form-group col-md-6">
-                <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time">
-            </div>
+    <div class="form-group col-md-6">
+        <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time">
+    </div>
 
-            <div class="form-group col-md-6">
-                <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
-            </div>
+    <div class="form-group col-md-6">
+        <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
+    </div>        
 
-
-
-            <div class="form-group col-md-12">
-                <label for="imageUpdate">Upload Image:</label>
-                <input type="file" class="form-control-file" id="imageUpdate">
-            </div>
-
-            <div class="form-group col-md-12">
-                <button id="save_changes" type="submit" class="btn btn-success">Save</button>
-            </div>
-        </form>
+    <div class="form-group col-md-12">
+        <button id="save_changes" type="submit" class="btn btn-success">Save</button>
+    </div>
+</form>
 
 {% endblock %}
