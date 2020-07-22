@@ -42,7 +42,7 @@ def new_recipe():
 # Save button click after editing recipe. Find one recipe from collection and edit it.
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    the_recipe = mongo.db.recipes.find_one({"_id: ObjectId(recipe_id)"})
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
 
