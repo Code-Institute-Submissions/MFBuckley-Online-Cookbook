@@ -3,19 +3,10 @@
 {% block content %}
 
        
-<div class="card text-center">
-  <div class="card-header">
-  {% for recipe in recipes %}
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        
-      </li>
+<div class="card text-center">  
+    <h1 class="pt-4">All Recipes</h1>
 
-      <li class="nav-item">
-        
-      </li>      
-    </ul>
-  </div>
+    {% for recipe in recipes %}     
   <div class="card-body">
     <h2 class="card-title">{{recipe.title}}</h2>
     <h5 class="servings">Portions: {{recipe.servings}}</h5>
@@ -39,11 +30,14 @@
     <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
         {{recipe.preparation}}
-      </div>
+      </div> 
     </div>
   </div>
 </div>
+</div>
 {% endfor %}
+</div>
+
 
 {% endblock %}
 

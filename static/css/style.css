@@ -13,39 +13,24 @@
 nav {
     font-family: "Open Sans";
     width: 100%;
-    margin-bottom: 20px;
     border: 1px solid #5cb85c;
 }
 
-
+/*---------Font awesome icons styling--------*/
 nav .fa {
    color: #5cb85c; 
 }
-/*----------Page headings-------*/
-h2 {
-    font-family: "Caveat";
-}
 
-/*----------Image Cards-------*/
-.card {
-    margin-bottom: 20px;
+
+
+/*----------Page headings, Cards and footer font-------*/
+h2,
+.card,
+.card-footer {
     font-family: "Caveat";
 }
-/*-------Ingredients and Preparations text areas---*/
+/*-------Ingredients and Preparations text areas - styling border---*/
 .form-control {
     border: 1px solid #5cb85c;
 }
 
-
-
-
-/*-Image of a Thermomix kitchen appliance--*/
-#thermo {
-    margin: none;
-}
-
-/*----------Footer-------*/
-.card-footer {
-    text-align: center;
-    font-family: "Caveat";
-}
