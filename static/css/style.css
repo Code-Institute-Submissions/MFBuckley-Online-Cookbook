@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap');
 
-
-
 /*----------Header-------*/
 .container h1 {
     text-align: center;   
@@ -21,14 +19,13 @@ nav .fa {
    color: #5cb85c; 
 }
 
-
-
 /*----------Page headings, Cards and footer font-------*/
 h2,
 .card,
 .card-footer {
     font-family: "Caveat";
 }
+
 /*-------Ingredients and Preparations text areas - styling border---*/
 .form-control {
     border: 1px solid #5cb85c;

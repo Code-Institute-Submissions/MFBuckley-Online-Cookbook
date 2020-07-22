@@ -7,11 +7,27 @@ Created by the Vorwerk company, a Thermomix is essentially a powerful blender wh
 
 1. As a Full Stack Developer I am creating an online cooking database that allows users to Create, Read, Update and Delete cooking recipes for a Thermomix kitchen appliance.
 
-1. As a back-end developer, I am creating a database of recipes so that it can be searched and updated by a user.
+1. As a back-end developer, I am creating a database of recipes so that it can be searched, added to and updated by a user.
 
-1. As a front-end developer I am creating a responsive webpage using Bootstrap4 so that it works well on all screen sizes.
+1. As a front-end developer I am creating a responsive webpage using Bootstrap 4 so that it works well on all media screen sizes.
 
-1. As a cook I would like to display images and text to show what the meal looks like, what ingredients are required and how to prepare it.
+1. As a front-end developer I am designing a parent base.html file and a card from the child all_recipes.html file containing the header, navbar and footer for fast, consistent page rendering and less coding of the same html several times over for each individual pages.
+
+1. As a front-end developer I am designing a simplistic homepage displaying header, navbar, all recipes displayed in a bootstrap card along with buttons to edit/delete recipes and a collapsible showing Ingredients and Preparations to make the UX as straightforward as possible.
+
+1. As a front-end developer I am designing the navbar to contain 3 links to the homepage, to an add-recipes page and an external link for simplicity.
+
+1. As a front-end developer I am adding forms as input means to add/update recipes.
+
+1. As a front-end developer I am adding Edit/Delete buttons to the homepage to make updating the database as easy as possible.
+
+1. As a front-end developer I am designing the add-recipes page to open in a new tab and include a form containing 5 input fields, 2 text areas and a submit button.
+
+1. As a back-end developer I am mapping/wiring/routing Save/Edit/Delete buttons to mongodb to enable addition, removal or updates of data to the database.
+
+1. As a back-end developer I am mapping page links from py-mongo to html to render individual pages i.e home page and add-recipes page.
+
+1. As a cook I would like to know what ingredients are required and how to prepare the recipe.
 
 1. As a cook I want to add, edit and delete recipes to build a collection of my favourite recipes.
 
@@ -24,9 +40,13 @@ Template inheritance via Jinja code from base.html extended to child html files.
 
 ## Features Left to Implement
 
-Changing number of servings adjusts amounts of ingredients necessary to make the recipe.
+Functionality to upload images showing what meals look like.
 
-Ingredients and Preparation textareas are limited to 20 rows.
+As the database grows, stats about database e.g. how many recipes it contains under how many categories, how many times a given recipe has been read etc.
+
+Changing number of servings to adjust amounts of ingredients necessary to make the recipe.
+
+Ingredients and Preparation textareas are limited to 20 rows. These would ideally be responsive depending on input.
 
 # Technologies used
 
