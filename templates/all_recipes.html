@@ -3,7 +3,7 @@
 {% block content %}
 
        
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/055bc08c-5abe-48cc-ae97-e1ca9190738b/Derivates/8d637c1d-774d-440c-b6e6-a6bbf72c9435.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Ciabatta</strong></h5>
@@ -11,10 +11,12 @@
     <p>
         <a class="btn btn-success mb-2" data-toggle="collapse" href="{{ url_for ('get_recipes') }}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Ingredients</a>
         <a class="btn btn-success mb-2" data-toggle="collapse" href="{{ url_for ('get_recipes') }}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Preparation</a> 
+        <a class="btn btn-primary mb-2" href="{{ url_for ('edit_recipe', recipe_id=_id) }}" role="button"><i class="fa fa-edit"></i> Edit</a>
+        <a class="btn btn-danger mb-2" href="{{ url_for ('delete_recipe', recipe_id=_id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
     </p>
     <div class="row">
         <div class="col">
-            <div class="collapse multi-collapse" id="ciabattaIngredients">
+            <div class="collapse multi-collapse">
             {% for recipe in recipes %}
                 <div class="card card-body">
                 {{recipe.ingredients}}
@@ -36,7 +38,7 @@
   </div>
 </div>
 
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/765D50D1-4D31-4EF4-9F11-7C7FE5B1310E/Derivates/9d170ea7-e39a-4983-b9c9-85164f0dd7df.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Apricot Banana Bread</strong></h5> 
@@ -67,7 +69,7 @@
   </div>
 </div>
 
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/77CFC68D-8954-4817-A7D5-2B66539834E8/Derivates/130c388b-75f9-47a1-8423-1275e813c2d9.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Watermelon Lemonade</strong></h5> 
@@ -98,7 +100,7 @@
   </div>
 </div>
 
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/A1395469-3EEB-4274-9018-C5BBC5E0465B/Derivates/f1adcaa7-7ba2-45e2-afe7-c1da84109394.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Apricot-Lemon Lemonade</strong></h5> 
@@ -129,7 +131,7 @@
   </div>
 </div>
 
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/D17CF0E1-E0C1-465F-899A-EA24A362392D/Derivates/dbb1e5eb-fcf1-44e0-9d1b-c573608c1ad4.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Bean and Avacado Burrito</strong></h5> 
@@ -160,7 +162,7 @@
   </div>
 </div>
 
-<div class="card mx-auto col-6">
+<div class="card mx-auto col-md-4">
   <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/144019_0-256-2953-2953.jpg" alt="Card image cap">
   <div class="card-body">    
     <h5 class="card-title"><strong>Chicken and Chipotle Sauce Burrito</strong></h5>

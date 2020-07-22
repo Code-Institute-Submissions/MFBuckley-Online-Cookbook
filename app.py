@@ -37,11 +37,6 @@ def new_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
-# Connect to Update Recipes file
-@app.route('/update_recipe')
-def update_recipe():
-    return render_template("edit.html", categories=mongo.db.categories.find(),
-    recipes=mongo.db.recipes.find())
 
 
 # Save button click after editing recipe. Find one recipe from collection and edit it.

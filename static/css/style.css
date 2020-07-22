@@ -16,6 +16,11 @@ nav {
     margin-bottom: 20px;
     border: 1px solid #5cb85c;
 }
+
+
+nav .fa {
+   color: #5cb85c; 
+}
 /*----------Page headings-------*/
 h2 {
     font-family: "Caveat";
@@ -30,6 +35,7 @@ h2 {
 .form-control {
     border: 1px solid #5cb85c;
 }
+
 
 
 

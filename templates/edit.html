@@ -10,7 +10,7 @@
         </div>      
 
 
-        <form action="{{ url_for('change_recipe') }}" method="POST">
+        <form action="{{ url_for('change_recipe', recipe_id=_id) }}" method="POST">
 
             <div class="form-group col-md-12">
                     <select class="form-control" id="selectCategory" name="selectCategory">
@@ -57,8 +57,8 @@
             
 
             <div class="form-group col-md-12">
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" id="saveChanges" class="btn btn-success" role="button">Save</a>
-                <a href="{{ url_for('delete_recipe')}}" id="deleteRecipe" class="btn btn-danger" role="button">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=_id)}}" id="saveChanges" class="btn btn-success" role="button">Save</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=_id)}}" id="deleteRecipe" class="btn btn-danger" role="button">Delete</a>
             </div>
             
         </form>

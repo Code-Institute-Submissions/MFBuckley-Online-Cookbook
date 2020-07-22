@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
 
     <title>Online Cookbook</title>
@@ -20,7 +21,7 @@
 
  <!-- Navbar-------- -->   
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('get_recipes') }}">Home</a>
+        <a class="navbar-brand" href="{{ url_for('get_recipes') }}"><i class="fa fa-home"></i> Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,19 +30,12 @@
             <ul class="navbar-nav mr-auto">
                
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Manage Recipes</a>
-                   
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url_for('add_recipe') }}" target="_blank">Add Recipe</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ url_for('update_recipe') }}" target="_blank">Edit/Delete Recipe</a>
-                    </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('add_recipe') }}" target="_blank"><i class="fa fa-plus"></i> Add Recipes<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="https://thermomix.vorwerk.de/home/" target="_blank">Thermomix<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="https://thermomix.vorwerk.de/home/" target="_blank"><i class="fa fa-link"></i> Thermomix<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             
