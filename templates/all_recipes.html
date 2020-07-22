@@ -3,109 +3,47 @@
 {% block content %}
 
        
-<div class="card mx-auto col-md-4">
-  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/055bc08c-5abe-48cc-ae97-e1ca9190738b/Derivates/8d637c1d-774d-440c-b6e6-a6bbf72c9435.jpg" alt="Card image cap">
-  <div class="card-body">    
-    <h5 class="card-title"><strong>Ciabatta</strong></h5>
-    <!--Collapsible cards showing Ingredients and Preparation steps -->
-    <p>
-    {% for recipe in recipes %}
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="{{ url_for ('get_recipes') }}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Ingredients</a>
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="{{ url_for ('get_recipes') }}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Preparation</a> 
-        <a class="btn btn-primary mb-2" href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" target="_blank" role="button"><i class="fa fa-edit"></i> Edit</a>
-        <a class="btn btn-danger mb-2" href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
-    </p>
-    <div class="row">
-        <div class="col">
-            <div class="collapse multi-collapse">            
-                <div class="card card-body">
-                {{recipe.ingredients}}
-            </div>
-    {% endfor %}
-        </div>
-    </div>
+<div class="card text-center">
+  <div class="card-header">
+  {% for recipe in recipes %}
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        
+      </li>
 
-  <div class="col">
-    <div class="collapse multi-collapse">
-    {% for recipe in recipes %}
-      <div class="card card-body">
-        {{recipe.preparation}}
-      </div>
-    {% endfor %}
-    </div>
+      <li class="nav-item">
+        
+      </li>      
+    </ul>
   </div>
-</div>       
-  </div>
-</div>
-
-
-
-<div class="card mx-auto col-md-4">
-  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/77CFC68D-8954-4817-A7D5-2B66539834E8/Derivates/130c388b-75f9-47a1-8423-1275e813c2d9.jpg" alt="Card image cap">
-  <div class="card-body">    
-    <h5 class="card-title"><strong>Watermelon Lemonade</strong></h5> 
+  <div class="card-body">
+    <h2 class="card-title">{{recipe.title}}</h2>
+    <h5 class="servings">Portions: {{recipe.servings}}</h5>
+    <h5 class="servings">Prep: {{recipe.prep_time}}</h5>
+    <h5 class="servings">Total Cooking Time: {{recipe.total_cooking_time}}</h5>
     <p>
-    {% for recipe in recipes %}
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Ingredients</a>
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Preparation</a> 
-        <a class="btn btn-primary mb-2" href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" target="_blank" role="button"><i class="fa fa-edit"></i> Edit</a>
-        <a class="btn btn-danger mb-2" href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
+        <button class="btn btn-success" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ingred & Prep</button>
+        <a class="btn btn-primary" href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" target="_blank" role="button"><i class="fa fa-edit"></i> Edit</a>
+        <a class="btn btn-danger ml-2" href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
     </p>
+
 <div class="row">
   <div class="col">
-    <div class="collapse multi-collapse">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
         {{recipe.ingredients}}
       </div>
-    {% endfor %}
     </div>
   </div>
   <div class="col">
-    <div class="collapse multi-collapse">
-    {% for recipe in recipes %}
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
         {{recipe.preparation}}
       </div>
-    {% endfor %}
     </div>
-  </div>
-</div>      
   </div>
 </div>
-
-
-<div class="card mx-auto col-md-4">
-  <img class="card-img-top" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/D17CF0E1-E0C1-465F-899A-EA24A362392D/Derivates/dbb1e5eb-fcf1-44e0-9d1b-c573608c1ad4.jpg" alt="Card image cap">
-  <div class="card-body">    
-    <h5 class="card-title"><strong>Bean and Avacado Burrito</strong></h5> 
-    <p>
-    {% for recipe in recipes %}
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Ingredients</a>
-        <a class="btn btn-success mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Preparation</a> 
-        <a class="btn btn-primary mb-2" href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" target="_blank" role="button"><i class="fa fa-edit"></i> Edit</a>
-        <a class="btn btn-danger mb-2" href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
-</p>
-<div class="row">
-  <div class="col">
-    <div class="collapse multi-collapse">
-      <div class="card card-body">
-        {{recipe.ingredients}}
-      </div>
-    {% endfor %}
-    </div>
-  </div>
-  <div class="col">
-    <div class="collapse multi-collapse">
-    {% for recipe in recipes %}
-      <div class="card card-body">
-        {{recipe.preparation}}
-      </div>
-    {% endfor %}
-    </div>
-  </div>
-</div>      
-  </div>
-</div>
+{% endfor %}
 
 {% endblock %}
 

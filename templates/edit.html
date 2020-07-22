@@ -13,7 +13,7 @@
         <div class="form-group col-md-12">
             <select class="form-control" id="selectCategory" name="selectCategory">
                 <option>Select Category</option>
-                {% for cat in categories %}
+                {% for cat in categories %}   
                 <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                 {% endfor %}                        
             </select>
@@ -24,36 +24,36 @@
                 <option>Select Recipe</option>
                 {% for recipe in recipes %}
                 <option value="{{recipe.title}}">{{recipe.title}}</option> 
-                {% endfor %}                
+                               
             </select>
         </div>
 
         <div class="form-group col-md-12">
-        {% for recipe in recipes %}
+        
             <textarea type="text" class="form-control" value="{{recipe.ingredients}}" name="ingredients" id="ingredients" placeholder="Insert Ingredients here" rows="20">{{recipe.ingredients}}</textarea>
-        {% endfor %}
+        
         </div>
 
         <div class="form-group col-md-12">
-        {% for recipe in recipes %}
+        
             <textarea type="text" class="form-control" value="{{recipe.preparation}}" name="preparation" id="preparation" placeholder="Preparation" rows="20">{{recipe.preparation}}</textarea>
-        {% endfor %}
+       
         </div>
 
         <div class="form-group col-md-6">
-        {% for recipe in recipes %}   
+         
             <input name="servings" type="text" class="form-control" id="servings" placeholder="Servings: " value="{{recipe.servings}}" >
-        {% endfor %}
+        
         </div>
 
         <div class="form-group col-md-6">
-        {% for recipe in recipes %}
+        
             <input name="prep_time" type="text" class="form-control" id="prep_time" placeholder="Prep Time: " value="{{recipe.prep_time}}">
-        {% endfor %}
+        
         </div>
 
         <div class="form-group col-md-6">
-        {% for recipe in recipes %}
+        
             <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time: " value="{{recipe.total_cooking_time}}">        
         </div>
 
