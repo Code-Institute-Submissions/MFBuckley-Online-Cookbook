@@ -20,15 +20,22 @@ mongo = PyMongo(app)
 
 @app.route('/')
 
-# Connect Read all Recipes file
+# Display all recipes page
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("all_recipes.html", recipes=mongo.db.recipes.find())
 
-# Connect to Create/Add recipes to database file
+# Display addrecipe.html page
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html")
+
+# Post new recipe to database i.e.clicking save button creates new document in recipes collection
+@app.route('/new_recipe', methods=['POST'])
+def new_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
 
 # Connect to Update Recipes file
 @app.route('/update_recipe')
@@ -36,27 +43,21 @@ def update_recipe():
     return render_template("edit.html", categories=mongo.db.categories.find(),
     recipes=mongo.db.recipes.find())
 
-# Post new recipe to database
-@app.route('/new_recipe', methods=['POST'])
-def new_recipe():
-    recipes = mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
 
-# Edit recipes link connect
+# Save button click after editing recipe. Find one recipe from collection and edit it.
 @app.route('/edit_recipe/<recipe_id>')
-def edit_recipe(recipes_id):
-    the_recipe = mongo.db.recipes.find({"_id: ObjectId(recipes_id)"})
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id: ObjectId(recipe_id)"})
     all_categories = mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
 
-# Change recipe by accessing tasks collection in database
+# Change recipe by accessing tasks collection in database via form action
 @app.route('/change_recipe/<recipe_id>', methods=["POST"])
 def change_recipe(recipe_id):
     recipes = mongo.db.tasks
     recipes.update({'_id': ObjectId(recipe_id)},
     {        
-        'category_name':request.form.get('category_name'),
+        'category_name': request.form.get('category_name'),
         'title':request.form.get('title'),
         'ingredients': request.form.get('ingredients'),
         'preparation': request.form.get('preparation'),

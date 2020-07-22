@@ -8,7 +8,7 @@
 
 <form action="{{ url_for('new_recipe') }}", method="POST">
     <div class="form-group col-md-12">
-        <select class="form-control" id="selectCategory" name="selectCategory">
+        <select class="form-control" id="category" name="category_name">
             <option>Select Category</option>
             {% for cat in categories %}
             <option value="{{cat.category_name}}">{{cat.category_name}}</option>
