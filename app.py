@@ -53,7 +53,7 @@ def change_recipe(recipe_id):
     recipes.update({'_id': ObjectId(recipe_id)},
     {        
         'category_name': request.form.get('category_name'),
-        'title':request.form.get('title'),
+        'title': request.form.get('title'),
         'ingredients': request.form.get('ingredients'),
         'preparation': request.form.get('preparation'),
         'servings': request.form.get('servings'),
