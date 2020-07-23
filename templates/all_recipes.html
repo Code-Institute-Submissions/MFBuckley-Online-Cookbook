@@ -1,20 +1,26 @@
-<!--Child html in this file incorporated in parent html file base.html -->
+<!---Child html in this file incorporated in parent html file base.html--->
 {% extends 'base.html'%}
 {% block content %}
-
-       
+<!---Individual recipe key/value pair data is retrieved via the respective object id of each document in the database-->
+<!---Card diaplaying the recipe title, number of portions recipe provides, preparation time--->       
 <div class="card text-center">  
     <h1 class="pt-4">All Recipes</h1>
 
+<!---Jinja for loop retreives the individual values in from the key/value pairs from the individual recipe document-->
     {% for recipe in recipes %}     
   <div class="card-body">
     <h2 class="card-title">{{recipe.title}}</h2>
     <h5 class="servings">Portions: {{recipe.servings}}</h5>
     <h5 class="servings">Prep: {{recipe.prep_time}}</h5>
     <h5 class="servings">Total Cooking Time: {{recipe.total_cooking_time}}</h5>
+
+<!---Collapsible buttons on click retrieve ingredients and  preparation steps for individual recipes via object id in database--->
     <p>
         <button class="btn btn-success" type="button" data-toggle="collapse" data-target=".multi-collapse"  aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ingred & Prep</button>
+        <!---Jinja calls edit_recipe function when edit button is clicked-->
         <a class="btn btn-primary" href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" target="_blank" role="button"><i class="fa fa-edit"></i> Edit</a>
+        
+        <!---Jinja calls delete_recipe function when delete button is clicked-->
         <a class="btn btn-danger ml-2" href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" role="button"><i class="fa fa-trash"></i> Delete</a>
     </p>
 

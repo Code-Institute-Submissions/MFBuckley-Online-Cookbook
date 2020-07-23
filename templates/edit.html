@@ -2,13 +2,13 @@
 {% extends 'base.html'%}
 {% block content %}
 
-
-<!--Edit Recipe Form -->
+<!--This file retrieves a specific recipe and POSTs updates to the backend-->
+<!--Edit Recipe Form-->
 <body>
     <div class="row">
         <div class="container text-center"><h2>Edit Recipe</h2></div>    
     </div>      
-
+<!--Jinja code calls change_recipe function in pp.py-->
     <form action="{{ url_for('change_recipe', recipe_id=recipe._id) }}" method="POST">
         <div class="form-group col-md-12">
           <input name="category_name" type="text" class="form-control" id="category_name" value="{{recipe.category_name}}" placeholder="Change Category Name">
@@ -38,15 +38,11 @@
         <div class="form-group col-md-6">        
             <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time: " value="{{recipe.total_cooking_time}}">        
         </div>
-
+<!--Form posts updated recipe to backend database on clicking save button below -->
         <div class="form-group col-md-12">
-            <button name="action" class="btn btn-success" type="submit">Save</button>
-        </div>
-        
+            <button id="save_changes" class="btn btn-success" type="submit">Save</button>
+        </div>        
     </form>
-
-   
-
 </body>  
 {% endblock %}
  

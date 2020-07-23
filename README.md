@@ -62,12 +62,6 @@ Cascading Style Sheets 3 is a style sheet language used for describing the prese
 
 Bootstrap 4 is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites. It was first developed by Twitter developers.
 
-[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
-
-JavaScript is a high-level, often just-in-time compiled and multi-paradigm programming language. 
-Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. 
-The vast majority of websites use it for client-side page behavior and all major web browsers have a dedicated JavaScript engine to execute it.
-
 [Python3](https://www.python.org/)
 
 Python is an interpreted, high-level, general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. 
@@ -90,6 +84,13 @@ Flask-PyMongo bridges Flask and PyMongo and provides some convenience helpers.
 
 
 # Testing
+
+Create, Read, Update, Delete database functionality all working as expected. Source code console not showing errors.
+
+[CSS Validator](https://jigsaw.w3.org/css-validator/#validate-by-input)- no CSS3 errors found
+
+[HTML Validator](https://validator.w3.org/#validate_by_input) - errors arising from template inheritance, conditional rendering and the use of Jinja templating language. 
+
 
 # Deployment
 
@@ -115,6 +116,7 @@ Recipes source and [Thermomix](https://thermomix.vorwerk.de/thermomix/tm6/)
 ## Acknowledgements
 
 This website idea is a project suggestion for the third milestone project in the Fullstack Web Developer course from Code Institute, Dublin Ireland.
+Big shout out to the tutors at code institue for walking me through my navigation issues and all errors encountered.
 
 
 

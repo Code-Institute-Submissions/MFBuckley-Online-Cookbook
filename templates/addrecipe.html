@@ -6,6 +6,8 @@
     <div class="container text-center"><h2>Add Recipe</h2></div>    
 </div>
 
+<!--Form directs to new_recipe function in app.py to add new recipes to database-->
+<!--Jinja calls new_recipe function from file app.py-->
 <form action="{{ url_for('new_recipe') }}", method="POST">
     <div class="form-group col-md-12">
         <input name="category_name" type="text" class="form-control" id="category_name" placeholder="Add Category Name">
@@ -33,8 +35,9 @@
 
     <div class="form-group col-md-6">
         <input name="total_cooking_time" type="text" class="form-control" id="total_cooking_time" placeholder="Total Cooking Time">
-    </div>        
+    </div>  
 
+<!--Form posts new recipe to backend database on clicking save button below -->
     <div class="form-group col-md-12">
         <button id="save_changes" type="submit" class="btn btn-success">Save</button>
     </div>
