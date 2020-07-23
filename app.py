@@ -5,8 +5,8 @@ if path.exists('env.py'):
     import env
 
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo #import pymongo library
-from bson.objectid import ObjectId #importing from BSON library
+from flask_pymongo import PyMongo   #import pymongo library
+from bson.objectid import ObjectId   #importing from BSON library
 
 # flask uses import name to know where to look for templates, resources etc
 app = Flask(__name__)
@@ -37,8 +37,6 @@ def new_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
-
-
 # Save button click after editing recipe. Find one recipe from collection and edit it.
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
@@ -49,7 +47,7 @@ def edit_recipe(recipe_id):
 # Change recipe by accessing tasks collection in database via form action
 @app.route('/change_recipe/<recipe_id>', methods=["POST"])
 def change_recipe(recipe_id):
-    recipes = mongo.db.tasks
+    recipes = mongo.db.recipes
     recipes.update({'_id': ObjectId(recipe_id)},
     {        
         'category_name': request.form.get('category_name'),
@@ -65,7 +63,7 @@ def change_recipe(recipe_id):
 #Delete recipe
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
-    mongo.db.tasks.remove({'_id': ObjectId(recipe_id)})
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
     
