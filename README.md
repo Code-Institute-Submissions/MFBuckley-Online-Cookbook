@@ -84,6 +84,10 @@ It makes getting started with Python qiuck and easy and can scale to complex pro
 MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
 MongoDB Atlas is the global cloud database service for modern applications.
 
+[Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+
+Flask-PyMongo bridges Flask and PyMongo and provides some convenience helpers.
+
 
 # Testing
 
